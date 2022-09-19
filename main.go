@@ -1,4 +1,4 @@
-package exmaple
+package main
 
 import "fmt"
 
