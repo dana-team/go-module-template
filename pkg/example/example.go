@@ -1,11 +1,6 @@
 package example
 
-import "fmt"
-
-func helloworld() string {
+func Helloworld() string {
 	return "Hello World!!"
 }
 
-func main() {
-	fmt.Println(helloworld())
-}
