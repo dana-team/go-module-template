@@ -1,9 +1,11 @@
 package example
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestHelloWorld(t *testing.T) {
-	if helloworld() != "Hello World!!" {
+	if Helloworld() != "Hello World!!" {
 		t.Fatal("Test fail")
 	}
 }
