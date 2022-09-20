@@ -11,8 +11,8 @@ run: ##go run
 
 .PHONY: build
 build:
-	GOARCH=amd64 GOOS=darwin go build -o ${BINARY_NAME}-darwin main.go
-	GOARCH=amd64 GOOS=linux go build -o ${BINARY_NAME}-linux main.go
+	GOARCH=amd64 GOOS=darwin go build -o ${BINARY_NAME}-darwin ./...
+	GOARCH=amd64 GOOS=linux go build -o ${BINARY_NAME}-linux ./...
 
 build_and_run: build run
 
@@ -21,12 +21,12 @@ clean:
 	rm ${BINARY_NAME}-darwin
 	rm ${BINARY_NAME}-linux
 test:
-	go test ./...
+	go test ./... -v -cover
 
 dep:
 	go mod download
 vet:
-	go vet
+	go vet ./...
 
 help:
 	@echo 'Usage: make <OPTIONS> ... <TARGETS>'
