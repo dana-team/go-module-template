@@ -1,6 +1,6 @@
 package example
 
 func Helloworld() string {
-	return "Hello World Talker!!"
+	return "Hello World!!"
 }
 
