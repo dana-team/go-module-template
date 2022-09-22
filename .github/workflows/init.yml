@@ -24,5 +24,6 @@ jobs:
       - name: Run go mod
         run: go mod init ${{ github.event.repository.name }}
 
-      - name: Git Commit/Push Changes
-        uses: actions-x/commit@v1
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Apply php-cs-fixer changes
